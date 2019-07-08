@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microsservicecloud-config-eureka-client #需要从github上读取的资源名称,没有yml后缀
+      profile: dev #本次访问的配置项 读取github上的配置项
+      label: master #主干
+      uri: http://config-3344.com:3344 #本服务启动后先去找3344服务,通过springcloudConfig获取github上的服务地址

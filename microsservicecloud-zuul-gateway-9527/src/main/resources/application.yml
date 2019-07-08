@@ -1,0 +1,27 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microsservicecloud-zuul-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #将客户端注册到eureka服务列表中
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+zuul:
+  prefix: /cloud #添加前缀
+  ignored-services: microsservicecloud-dept# 禁用该服务名称进行访问 "*" 禁止所有
+  routes:
+    mydept.serviceId: microsservicecloud-dept #服务对外暴露的名称
+    mydept.path: /mydept/**                   #使用这个代替上面的服务名称
+
+
+info:
+  app.name: cloud-microsservicecloud #写死的
+  company.name: www.cloud.com
+  build.artifactId: $project.artifactId$ #动态
+  build.version: $project.version$
