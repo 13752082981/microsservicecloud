@@ -18,7 +18,8 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptCli
 
             @Override
             public Dept get(Long id, String dname) {
-                return new Dept().setDeptno(id).setDname(dname).setDb_source("该ID:"+id+"没有对应的信息---服务降级provider 已经关闭");
+                System.out.println("11111111111111111111111111111");
+                return new Dept().setDeptno(id).setDname(dname).setDb_source("该ID:"+id+"没有对应的信息---服务降级provider 已经关闭====="+id);
             }
 
             @Override

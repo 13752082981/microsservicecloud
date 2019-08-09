@@ -11,6 +11,18 @@
     <artifactId>microsservicecloud-provider-dept-8001</artifactId>
     <dependencies>
         <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-tc</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-txmsg-netty</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>cn.tx.springcloud</groupId>
             <artifactId>microsservicecloud-api</artifactId>
             <version>${project.version}</version>
@@ -23,11 +35,15 @@
 <!--        将微服务provider 注册到eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -63,10 +79,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <!--热部署-->
-        <dependency>
+     <!--   <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>springloaded</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

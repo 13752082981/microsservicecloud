@@ -12,8 +12,6 @@
     <artifactId>microsservicecloud-consumer-dept-feign</artifactId>
 
     <dependencies>
-
-
         <dependency>
             <groupId>cn.tx.springcloud</groupId>
             <artifactId>microsservicecloud-api</artifactId>
@@ -21,16 +19,16 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <!--Ribbon 相关-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -41,10 +39,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--热部署 修改后不需要重启 立即生效-->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>springloaded</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
